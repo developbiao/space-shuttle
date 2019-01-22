@@ -47,5 +47,11 @@ print  "Plains wealth: " . $tile->getWealthFactor() . PHP_EOL;
 $tile = new DiamondDecorator( new Plains() );
 print  "Diamond wealth: " . $tile->getWealthFactor() . PHP_EOL;
 
+$tile = new PollutionDecorator( new DiamondDecorator (
+  new Plains()
+));
+
+print  "Pollution Diamond wealth: " . $tile->getWealthFactor() . PHP_EOL;
+
 
 ?>
