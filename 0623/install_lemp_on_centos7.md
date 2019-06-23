@@ -1,6 +1,6 @@
 #### How to install LEMP stack on CentOS 7
 
-**1. Update yum and install necessary utils  **
+**1.Update yum and install necessary utils**
 ```shell
 sudo yum update
 # Install yum-utils packages tool
