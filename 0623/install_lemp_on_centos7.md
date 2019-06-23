@@ -26,7 +26,7 @@ sudo yum install epel-release -y
 
 ```
 
-**3. Install nginx **
+**3. Install nginx**
 ```
 
 # Reference nginx official http://nginx.org/en/linux_packages.html#RHEL-CentOS
@@ -56,7 +56,7 @@ sudo yum install nginx -y
 
 ```
 
-** 4.Install mysql5.7**
+**4.Install mysql5.7**
 ```
 # Yum mysqlrepository https://dev.mysql.com/downloads/repo/yum/
 
@@ -89,11 +89,9 @@ sudo mysql_secure_installation
 
 
 
-
-
 ```
 
-**5. Install php on CentOS **
+**5. Install php on CentOS**
 ```
 # Install Remi repository
 sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
