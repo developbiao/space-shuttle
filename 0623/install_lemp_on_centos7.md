@@ -123,12 +123,24 @@ sudo systemctl start php72-php-fpm.service
 # find ngins server user and group names
 egrep '^(user|group)' /etc/nginx/nginx.conf
 
+# before you need carate php-fpm directory
+sudo mkdir /var/run/php-fpm
+
 # Edit vim /etc/opt/remi/php72/php-fpm.d/www.conf set user and group to nginx
 sudo vim /etc/opt/remi/php72/php-fpm.d/www.conf
 
 # changed Like this
 user = nginx
 group = nginx
+
+listen.owner = nginx
+listen.group = nginx
+listen.mode = 0660
+
+
+# changed php-fpm
+listen = /var/run/php-fpm/php-fpm.sock
+
 
 # saved and close the file restart php-fpm service
 sudo systemctl restart php72-php-fpm.service
