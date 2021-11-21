@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title type="text/javascript">ES6-class</title>
+        <script>
+            window.onload = function () {
+                class Animal {
+                    constructor(name) {
+                        this.name = name;
+                    }
+
+                    speak() {
+                        console.log(this.name + ' makes a noise.');
+                    }
+                }
+
+                class Dog extends Animal{
+                    constructor(name) {
+                        // call the super class constuctor and pass in the name paramters
+                        super(name);
+                    }
+
+                    speak() {
+                        console.log(this.name + ' barks.');
+                    }
+                }
+
+                let mydog = new Dog('Xiaojiu')
+                mydog.speak(); // xiaojiu barks
+
+            };
+        </script>
+    </head>
+    <body>
+        <h3>ES6 class keyword</h3>
+    </body>
+</html>
